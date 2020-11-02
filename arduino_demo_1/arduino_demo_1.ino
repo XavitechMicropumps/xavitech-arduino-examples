@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: MIT
 // Copyright © 2020 Xavitech Micropums AB
 
+// This example demonstrates reading and writing to RAM using commands for reading/writing
+// pump speed and start/stop.
+
 #include "xavitech.h"
 
 SerialReadCommand readPumpSpeed;
