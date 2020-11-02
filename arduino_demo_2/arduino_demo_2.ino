@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: MIT
 // Copyright © 2020 Xavitech Micropums AB
 
+// This example reads "Serial" and looks for '+' or '-'.
+// For every '+' or '-' it will increase or decrease pump speed 10 steps.
+
 #include "xavitech.h"
 
 SerialReadCommand readPumpSpeed;
