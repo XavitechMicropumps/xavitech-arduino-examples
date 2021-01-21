@@ -89,7 +89,7 @@ bool writeToPump(Stream &port, SerialWriteCommand command)
     uint8_t checksum = 0; 
 
     sendBuffer[4] = 0b00111111 & (command.address >> 8);                    // MSB
-    if(command.ramEeprom) sendBuffer[4] = 0b01000000 + sendBuffer[4];       // If we should read from EEPROM
+    if(command.ramEeprom) sendBuffer[4] = 0b01000000 + sendBuffer[4];       // If we should write to EEPROM
     sendBuffer[5] = command.address & 0x00FF;                               // LSB
     sendBuffer[6] = (0b00111111 & (command.numberOfBytes - 1)) + 0b10000000;
 
